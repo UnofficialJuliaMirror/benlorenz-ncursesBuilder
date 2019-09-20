@@ -27,7 +27,7 @@ products(prefix) = [
     LibraryProduct(prefix, "libtermcap", :libtermcap)
 ]
 
-platforms = supported_platforms()
+platforms = filter(x->!isa(x,Windows),supported_platforms())
 
 dependencies = [
 ]
